@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Phone, MessageCircle, ShieldCheck, Camera, Lock, Network, Boxes, BadgeCheck } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
+import { LatestBlogCarousel } from "@/components/site/LatestBlogCarousel";
+import { ClientVoices } from "@/components/site/ClientVoices";
 import { CONTACT } from "@/lib/contact";
 
 export const Route = createFileRoute("/")({
@@ -76,6 +78,12 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* Latest blog posts */}
+      <LatestBlogCarousel />
+
+      {/* Client testimonials */}
+      <ClientVoices />
 
       {/* Trust band */}
       <section className="bg-[var(--brand-navy)] py-14 text-white">

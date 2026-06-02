@@ -35,6 +35,17 @@ export async function fetchPublishedPosts() {
   return (data ?? []) as Post[];
 }
 
+export async function fetchLatestPosts(limit = 5) {
+  const { data, error } = await supabase
+    .from("posts")
+    .select("*")
+    .eq("published", true)
+    .order("published_at", { ascending: false })
+    .limit(limit);
+  if (error) throw error;
+  return (data ?? []) as Post[];
+}
+
 export async function fetchPostBySlug(slug: string) {
   const { data, error } = await supabase
     .from("posts")
