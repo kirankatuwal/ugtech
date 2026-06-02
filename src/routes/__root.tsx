@@ -89,7 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "icon",
         type: "image/png",
-        href: "src/assets/logo-ug.jpg"
+        href: "/assets/logo-ug-Drbiy-Di.jpg"
       }, // or .ico / .svg
     ],
   }),
