@@ -86,11 +86,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      {
-        rel: "icon",
-        type: "image/png",
-        href: "/assets/logo-ug-Drbiy-Di.jpg"
-      }, // or .ico / .svg
     ],
   }),
   shellComponent: RootShell,
